@@ -13,11 +13,11 @@
             anketa.age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Ваше имя: {0}\nВаш возраст: {1}", anketa.name, anketa.age); 
 
-            ShowColor(anketa.name);
+            ShowColor(anketa.name, anketa.age);
         }
-        static string ShowColor(string name)
+        static string ShowColor(string userName, int userAge)
         {
-            Console.Write($"{name} напишите любимый цвет на английском языке с маленькой буквы: ");
+            Console.Write($"{userName} напишите любимый цвет на английском языке с маленькой буквы: ");
             string color = Console.ReadLine();
 
             switch (color)
@@ -25,29 +25,23 @@
                 case "red":
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine($"Your color is {color}");
                     break;
                 case "green":
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine($"Your color is {color}");
                     break;
                 case "cyan":
                     Console.BackgroundColor = ConsoleColor.Cyan;
                     Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine($"Your color is {color}");
                     break;
                 default:
                     color = "yellow";
                     Console.BackgroundColor = ConsoleColor.Yellow;
                     Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine($"Your color is {color}");
                     break;
             }
+            Console.WriteLine($"Your color is {color}\n" +
+                              $"{userName}, {userAge}");
             return color;
         }
     }
