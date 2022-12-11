@@ -7,27 +7,34 @@
             var result = new int[5];
             for (int i = 0; i < result.Length; i++)
             {
-                Console.Write($"Введите элемент массива номер {i + 1} :");
+                Console.Write($"Введите элемент массива номер {i + 1}: ");
                 result[i] = int.Parse( Console.ReadLine() );
             }
             return result;
         }
-        static void Main(string[] args)
+        static int[] SortArray(int[] arr)
         {
-            int[] arr = GetArrayFromConsole();
             int temp;
-            for (int i = 0; i < arr.Length;i++) 
+            for (int i = 0; i < arr.Length; i++)
             {
                 for (int j = i + 1; j < arr.Length; j++)
                 {
-                    if (arr[i] > arr[j]) 
-                    { 
-                        temp = arr[i]; 
+                    if (arr[i] > arr[j])
+                    {
+                        temp = arr[i];
                         arr[i] = arr[j];
                         arr[j] = temp;
                     }
                 }
             }
+            return arr;
+        }
+        static void Main(string[] args)
+        {
+            int[] arr = GetArrayFromConsole();
+            
+            arr = SortArray(arr);
+
             foreach (var item in arr)
             {
                 Console.WriteLine(item);

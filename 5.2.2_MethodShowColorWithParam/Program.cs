@@ -45,5 +45,13 @@
                               $"{userName}, {userAge}");
             return color;
         }
+        static void ShowColors(string[] favColors)
+        {
+            Console.WriteLine("Ваши любимые цвета:");
+            foreach (var item in favColors) 
+            { 
+                Console.WriteLine(item);
+            }
+        }
     }
 }
