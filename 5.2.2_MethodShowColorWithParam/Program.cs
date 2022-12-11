@@ -17,7 +17,8 @@
         }
         static string ShowColor(string userName, int userAge)
         {
-            Console.Write($"{userName} напишите любимый цвет на английском языке с маленькой буквы: ");
+            Console.Write($"{userName}, {userAge} годиков\n" +
+                          $"Напишите любимый цвет на английском языке с маленькой буквы: ");
             string color = Console.ReadLine();
 
             switch (color)
