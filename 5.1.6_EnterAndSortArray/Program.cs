@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static int[] GetArrayFromConsole(int num = 5)
+        static int[] GetArrayFromConsole(ref int num)
         {
             var result = new int[num];
             for (int i = 0; i < result.Length; i++)
@@ -43,7 +43,8 @@
         }
         static void Main(string[] args)
         {
-            int[] array = GetArrayFromConsole(10);
+            int size = 6;
+            int[] array = GetArrayFromConsole(ref size);
 
             /*int[] sortedarray = SortArray(array)*/;
 
