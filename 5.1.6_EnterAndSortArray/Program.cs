@@ -43,7 +43,7 @@
         }
         static void Main(string[] args)
         {
-            int[] array = GetArrayFromConsole();
+            int[] array = GetArrayFromConsole(10);
 
             /*int[] sortedarray = SortArray(array)*/;
 
