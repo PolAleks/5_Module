@@ -29,9 +29,14 @@
             }
             return arr;
         }
-        static void ShowArray(int[] arr)
+        static void ShowArray(int[] array, bool isSort = false)
         {
-            foreach (var item in arr) 
+            var temp = array;
+            if (isSort)
+            {
+                temp = SortArray(array);
+            }
+            foreach (var item in temp) 
             {
                 Console.WriteLine(item);    
             }
@@ -40,9 +45,9 @@
         {
             int[] array = GetArrayFromConsole();
 
-            int[] sortedarray = SortArray(array);
+            /*int[] sortedarray = SortArray(array)*/;
 
-            ShowArray(sortedarray);
+            ShowArray(array, true);
         }
     }
 }
