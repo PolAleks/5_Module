@@ -11,9 +11,17 @@
 
             Console.Write("Введите ваш возраст: ");
             anketa.age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Ваше имя: {0}\nВаш возраст: {1}", anketa.name, anketa.age); 
+            Console.WriteLine("Ваше имя: {0}\nВаш возраст: {1}", anketa.name, anketa.age);
 
-            ShowColor(anketa.name, anketa.age);
+            //ShowColor(anketa.name, anketa.age);
+
+            //var favColor = new string[5];
+            //for (int i = 0; i < favColor.Length; i++)
+            //{
+            //    favColor[i] = ShowColor(anketa.name, anketa.age);
+            //}
+
+            ShowColors("red", "green");
         }
         static string ShowColor(string userName, int userAge)
         {
@@ -45,7 +53,7 @@
                               $"{userName}, {userAge}");
             return color;
         }
-        static void ShowColors(string[] favColors)
+        static void ShowColors(params string[] favColors)
         {
             Console.WriteLine("Ваши любимые цвета:");
             foreach (var item in favColors) 

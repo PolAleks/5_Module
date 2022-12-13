@@ -2,13 +2,13 @@
 {
     internal class Program
     {
-        static int[] GetArrayFromConsole()
+        static int[] GetArrayFromConsole(int num = 5)
         {
-            var result = new int[5];
+            var result = new int[num];
             for (int i = 0; i < result.Length; i++)
             {
                 Console.Write($"Введите элемент массива номер {i + 1}: ");
-                result[i] = int.Parse( Console.ReadLine() );
+                result[i] = int.Parse(Console.ReadLine());
             }
             return result;
         }
@@ -29,16 +29,20 @@
             }
             return arr;
         }
+        static void ShowArray(int[] arr)
+        {
+            foreach (var item in arr) 
+            {
+                Console.WriteLine(item);    
+            }
+        }
         static void Main(string[] args)
         {
-            int[] arr = GetArrayFromConsole();
+            int[] arr = GetArrayFromConsole(7);
             
             arr = SortArray(arr);
 
-            foreach (var item in arr)
-            {
-                Console.WriteLine(item);
-            }
+            ShowArray(arr);
         }
     }
 }
