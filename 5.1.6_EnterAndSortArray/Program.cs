@@ -38,11 +38,11 @@
         }
         static void Main(string[] args)
         {
-            int[] arr = GetArrayFromConsole(7);
-            
-            arr = SortArray(arr);
+            int[] array = GetArrayFromConsole();
 
-            ShowArray(arr);
+            int[] sortedarray = SortArray(array);
+
+            ShowArray(sortedarray);
         }
     }
 }
