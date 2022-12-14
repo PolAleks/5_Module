@@ -12,7 +12,7 @@
             Console.WriteLine("Исходный массив:");
             ShowArray(array);
 
-            SortArray(in array, out arrayDesc, out arrayAsc);
+            SortArray(array, out arrayDesc, out arrayAsc);
                         
             Console.WriteLine("Сортировка по убыванию:");
             ShowArray(arrayDesc);
@@ -20,8 +20,8 @@
             Console.WriteLine("Сортировка по возрастанию:");
             ShowArray(arrayAsc);
 
-            Console.WriteLine("Исходный массив:");
-            ShowArray(array);
+            //Console.WriteLine("Исходный массив:");
+            //ShowArray(array);
         }
         // Заполнение массива
         static int[] GetArrayFromConsole(ref int num)
@@ -35,7 +35,7 @@
             return result;
         }
         // Сортировка массива
-        static void SortArray(in int[] arr, out int[] sortedDesc, out int[] sortedAsc)
+        static void SortArray(int[] arr, out int[] sortedDesc, out int[] sortedAsc)
         {   
             sortedDesc = new int[arr.Length];
             Array.Copy(arr, sortedDesc, arr.Length);
