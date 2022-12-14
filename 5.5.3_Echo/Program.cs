@@ -17,13 +17,22 @@
         static void Echo(string saiWord, int deep)
         {
             var modifer = saiWord;
-            if (modifer.Length > 2) 
+
+            if (modifer.Length > 2) { 
                 modifer = modifer.Remove(0, 2);
+            }
+
+            bool isConsoleColore = deep > 0 & deep < 16;
+            if(isConsoleColore) { 
+                Console.BackgroundColor = (ConsoleColor)deep; 
+            }
             
             Console.WriteLine($"...{modifer}");
-            
-            if (deep > 1)      
+
+            if (deep > 1)
+            {
                 Echo(modifer, deep - 1);
+            }
         }
     }
 }
